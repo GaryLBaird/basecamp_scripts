@@ -8,11 +8,10 @@ require 'base64'
 require 'pp'
 
 # preset options to nil/null
-options = {:fname => nil, :fdir => nil,
-	:subscribers => nil, :fullpath => nil, :user_agent => nil, :content => nil,
-	:filedate => nil, :company_id => nil, :project_id => nil, :authorization => nil,
-  :content_type => "application/zip", :username => nil , :password => nil,
-  :get_users => nil, :debug => nil}
+options = {:fname => nil, :fdir => nil,	:subscribers => nil, :fullpath => nil,
+  :user_agent => nil, :content => nil, :filedate => nil, :company_id => nil,
+  :project_id => nil, :authorization => nil, :content_type => "application/zip",
+  :username => nil , :password => nil, :get_users => nil, :debug => nil}
 
 # Parse args
 parser = OptionParser.new do|opts|
