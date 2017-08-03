@@ -40,6 +40,7 @@ Usage: /upload/basecampupload.rb [options]
     -u, --username username          User account. Optional authentication methods: username and password or base46 encode.
     -p, --password password          User password. Optional authentication methods: username and password or base46 encode.
     -g, --get_users true             Bypass file upload and displays users for a project in json output.
+                                     This is useful if you don't yet know what the subscriber id's are and want to print out that information.
     -d, --debug true                 Prints values set.
     -h, --help                       Displays Help
 ```
