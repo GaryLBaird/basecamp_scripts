@@ -5,7 +5,7 @@ Simple command line scripts for basecamp.
 Uploads a file to a project from the command line. Automatically detects file size and takes care of upload for you. This could be used in connection with other scripts or by the windows task scheduler.
 ```
 Usage: /upload/basecampupload.rb [options]
- Example I:
+ Example I: Upload a zip file to a basecamp project.
          ruby basecampupload.rb
                         -f filename.zip
                         -C 1111111
@@ -15,7 +15,7 @@ Usage: /upload/basecampupload.rb [options]
                         -a 'email@address.com'
                         -u 'email@address.com'
                         -p 'p@ssword'
- Example II:
+ Example II: Get all users for a basecamp project. Helpful if you need to looup subscriber information.
          ruby basecampupload.rb
                         -C 1111111
                         -P 2222222
@@ -41,6 +41,6 @@ Usage: /upload/basecampupload.rb [options]
     -p, --password password          User password. Optional authentication methods: username and password or base46 encode.
     -g, --get_users true             Bypass file upload and displays users for a project in json output.
                                      This is useful if you don't yet know what the subscriber id's are and want to print out that information.
-    -d, --debug true                 Prints values set.
+    -d, --debug true                 Prints debug information. Can also be set using environment variable: i.e. SET debug=true 
     -h, --help                       Displays Help
 ```
