@@ -1,0 +1,81 @@
+{
+  "companies": 
+    {
+      "company":
+        [
+          {
+            "id": 11111111,
+            "name": "Company Name",
+            "default": true
+          }
+        ]
+  },
+  "projects": 
+    {
+      "project":
+        [
+          {
+            "id": 22222222,
+            "name": "Project name I",
+            "default": true
+          },
+          {
+            "id": 33333333,
+            "name": "Project name ",
+            "default": false
+          }
+        ]
+  },
+  "users":
+      {
+        "user":
+          [
+            {
+              "id": 44444444,
+              "name": "SomeFirstName SomeLastName",
+              "email_address": "somebody@someplace.ext",
+              "User_Agent": "somebody@someplace.ext",
+              "default": true,
+              "upload": false,
+              "login_credentials":
+                [
+                  {
+                    "username": null,
+                    "password": null
+                  }
+                ],
+              "authorization": null
+            },
+            {
+              "note": "setting 'upload':true will attempt use this users login_credentials or authorization base64authkey",
+              "id": 5555555,
+              "name": "SomeFirstName SomeLastName",
+              "email_address": "somebody@someplace.ext",
+              "User_Agent": "somebody@someplace.ext",
+              "default": true,
+              "upload": true,
+              "login_credentials":
+                [
+                  {
+                    "username": null,
+                    "password": null
+                  }
+                ],
+              "authorization": "Basic base64authkey"
+            }
+          ]
+  },           
+  "files":
+      {
+        "file":
+          [
+            {
+              "fname": null,
+              "fdir": null,
+              "fullpath": null,
+              "filesize": null
+            }
+          ]
+  },
+  "content": "New File Upload:"
+}
