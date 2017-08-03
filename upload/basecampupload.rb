@@ -158,13 +158,15 @@ if options[:get_users].nil?
   req_options = {
     use_ssl: uri.scheme == "https",
   }
-
+  # Start the attachment post which uploads the actual file to the company but is not visable until the second part.
   response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
     http.request(request)
   end
   if not options[:debug].nil?
     puts response.code
   end
+  # Grab the token if successful to use in the next step where this file will be assigned to the project and become visable to the users.
+  # TBD: Need to check for a valid token and error out if this step fails. 
   token = JSON.parse(response.body)['token']
   if not options[:debug].nil?
     puts token
@@ -192,7 +194,7 @@ if options[:get_users].nil?
   req_options = {
     use_ssl: uri.scheme == "https",
   }
-
+  # Start the upload post which uses the token recieved in the first post to assign the file to the project according.
   response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
     http.request(request)
   end
@@ -216,7 +218,7 @@ else
   req_options = {
     use_ssl: uri.scheme == "https",
   }
-
+  # Start the http: request
   response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
     http.request(request)
   end
