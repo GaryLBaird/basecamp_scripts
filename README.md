@@ -3,6 +3,7 @@ Simple command line scripts for basecamp.
 
 # Upload Files From Command Line
 Uploads a file to a project from the command line. Automatically detects file size and takes care of upload for you. This could be used in connection with other scripts or by the windows task scheduler.
+```
 Usage: /upload/basecampupload.rb [options]
  Example I:
          ruby basecampupload.rb
@@ -41,7 +42,4 @@ Usage: /upload/basecampupload.rb [options]
     -g, --get_users true             Bypass file upload and displays users for a project in json output.
     -d, --debug true                 Prints values set.
     -h, --help                       Displays Help
-
-
-
-
+```
